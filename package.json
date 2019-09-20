@@ -1,0 +1,32 @@
+{
+  "name": "test-pod",
+  "version": "1.0.0",
+  "description": "A test cafe configuration with cucumber",
+  "main": "index.js",
+  "repository": "https://github.com/FerJSsilva/test-pod.git",
+  "author": "Fernando Silva <fernando.silva@vistajet.com>",
+  "license": "MIT",
+  "scripts": {
+    "debug": "node --inspect=1337 --debug-brk --nolazy node_modules/cucumber/bin/cucumber-js --tags @debug --format json:./reports/report.json",
+    "test": "./node_modules/.bin/cucumber-js.cmd",
+    "test-report": "./node_modules/.bin/cucumber-js.cmd --format json:./reports/report.json",
+    "test-chrome": "./node_modules/.bin/cucumber-js.cmd  --world-parameters \"{\\\"browser\\\": \\\"chrome\\\"}\" features/features",
+    "test-ie": "./node_modules/.bin/cucumber-js.cmd  --world-parameters \"{\\\"browser\\\": \\\"ie\\\"}\" features/features",
+    "test-edge": "./node_modules/.bin/cucumber-js.cmd  --world-parameters \"{\\\"browser\\\": \\\"edge\\\"}\" features/features",
+    "test-firefox": "./node_modules/.bin/cucumber-js.cmd  --world-parameters \"{\\\"browser\\\": \\\"firefox\\\"}\" features/features",
+    "test-opera": "./node_modules/.bin/cucumber-js.cmd  --world-parameters \"{\\\"browser\\\": \\\"opera\\\"}\" features/features",
+    "test-safari": "./node_modules/.bin/cucumber-js.cmd  --world-parameters \"{\\\"browser\\\": \\\"safari\\\"}\" features/features",
+    "test-chrome-report": "./node_modules/.bin/cucumber-js.cmd  --format json:./reports/report.json --world-parameters \"{\\\"browser\\\": \\\"chrome\\\"}\" features/features",
+    "test-ie-report": "./node_modules/.bin/cucumber-js.cmd  --format json:./reports/report.json --world-parameters \"{\\\"browser\\\": \\\"ie\\\"}\" features/features",
+    "test-edge-report": "./node_modules/.bin/cucumber-js.cmd  --format json:./reports/report.json --world-parameters \"{\\\"browser\\\": \\\"edge\\\"}\" features/features",
+    "test-firefox-report": "./node_modules/.bin/cucumber-js.cmd  --format json:./reports/report.json --world-parameters \"{\\\"browser\\\": \\\"firefox\\\"}\" features/features",
+    "test-opera-report": "./node_modules/.bin/cucumber-js.cmd  --format json:./reports/report.json --world-parameters \"{\\\"browser\\\": \\\"opera\\\"}\" features/features",
+    "test-safari-report": "./node_modules/.bin/cucumber-js.cmd  --format json:./reports/report.json --world-parameters \"{\\\"browser\\\": \\\"safari\\\"}\" features/features",
+    "test-chrome-headless": "./node_modules/.bin/cucumber-js.cmd  --world-parameters \"{\\\"browser\\\": \\\"chrome:headless\\\"}\" features/features",
+    "test-firefox-headless": "./node_modules/.bin/cucumber-js.cmd  --world-parameters \"{\\\"browser\\\": \\\"firefox:headless\\\"}\" features/features"
+  },
+  "dependencies": {
+    "cucumber": "^5.1.0",
+    "testcafe": "^1.2.1"
+  }
+}
